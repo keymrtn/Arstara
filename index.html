@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arstara - AI-Powered Automation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #58a6ff 0%, #8a2be2 100%);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center top, #161b24 0%, #0d1117 70%);
+        }
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #ffffff, #8b949e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 900px;
+            line-height: 1.1;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            color: #8b949e;
+            margin-bottom: 3rem;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #1f6feb, #6e40c9);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(110, 64, 201, 0.5);
+            background: linear-gradient(135deg, #388bfd, #8a2be2);
+        }
+        .section {
+            padding: 120px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+        .product-card {
+            background: rgba(22, 27, 34, 0.5);
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #58a6ff, transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #484f58;
+            background: rgba(22, 27, 34, 0.8);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .product-card:hover::before {
+            opacity: 1;
+        }
+        .product-card h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .product-card p {
+            color: #8b949e;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background: #090c10;
+            padding: 4rem 5%;
+            text-align: center;
+            border-top: 1px solid #21262d;
+        }
+        .contact-info {
+            font-size: 1.1rem;
+            color: #8b949e;
+            margin-top: 1.5rem;
+        }
+        .contact-info a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .contact-info a:hover {
+            background: rgba(88, 166, 255, 0.1);
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .hero p { font-size: 1.1rem; }
+            .product-card { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            Arstara
+        </div>
+        <a href="mailto:rickymartin@arstara.com" class="cta-btn" style="padding: 10px 24px; font-size: 0.95rem;">Contact Us</a>
+    </header>
+
+    <section class="hero">
+        <h1>AI-powered automation <br/>for businesses.</h1>
+        <p>Arstara builds intelligent tools that help businesses automate repetitive workflows, access business information faster, and improve daily operations using AI.</p>
+        <a href="#product" class="cta-btn">Discover Our Product</a>
+    </section>
+
+    <section id="product" class="section">
+        <h2 class="section-title">Our Product</h2>
+        <div class="product-card">
+            <h3>AI-Powered Business Assistant</h3>
+            <p>Connect your company data with our conversational interfaces, allowing your team to retrieve mission-critical information and perform routine tasks seamlessly, without ever having to manually navigate internal systems.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo" style="justify-content: center;">
+            <div class="logo-icon" style="width: 20px; height: 20px; border-radius: 6px;"></div>
+            Arstara
+        </div>
+        <p class="contact-info">Get in touch directly at <br/> <a href="mailto:rickymartin@arstara.com">rickymartin@arstara.com</a></p>
+        <p style="color: #484f58; font-size: 0.9rem; margin-top: 3rem;">&copy; 2026 Arstara. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
