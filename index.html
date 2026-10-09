@@ -1,214 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arstara - AI-Powered Automation</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background: rgba(13, 17, 23, 0.8);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            box-sizing: border-box;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .logo-icon {
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, #58a6ff 0%, #8a2be2 100%);
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
-        }
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: radial-gradient(circle at center top, #161b24 0%, #0d1117 70%);
-        }
-        h1 {
-            font-size: 4.5rem;
-            font-weight: 700;
-            letter-spacing: -1.5px;
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #ffffff, #8b949e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            max-width: 900px;
-            line-height: 1.1;
-        }
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            color: #8b949e;
-            margin-bottom: 3rem;
-        }
-        .cta-btn {
-            background: linear-gradient(135deg, #1f6feb, #6e40c9);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(110, 64, 201, 0.5);
-            background: linear-gradient(135deg, #388bfd, #8a2be2);
-        }
-        .section {
-            padding: 120px 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 3rem;
-            text-align: center;
-            letter-spacing: -0.5px;
-        }
-        .product-card {
-            background: rgba(22, 27, 34, 0.5);
-            border: 1px solid #30363d;
-            border-radius: 20px;
-            padding: 4rem 3rem;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #58a6ff, transparent);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #484f58;
-            background: rgba(22, 27, 34, 0.8);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-        .product-card:hover::before {
-            opacity: 1;
-        }
-        .product-card h3 {
-            color: #ffffff;
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-        .product-card p {
-            color: #8b949e;
-            font-size: 1.15rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        footer {
-            background: #090c10;
-            padding: 4rem 5%;
-            text-align: center;
-            border-top: 1px solid #21262d;
-        }
-        .contact-info {
-            font-size: 1.1rem;
-            color: #8b949e;
-            margin-top: 1.5rem;
-        }
-        .contact-info a {
-            color: #58a6ff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        .contact-info a:hover {
-            background: rgba(88, 166, 255, 0.1);
-            text-decoration: none;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            .hero p { font-size: 1.1rem; }
-            .product-card { padding: 2rem 1.5rem; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arstara — Temukan UMKM terdekat yang benar-benar buka</title>
+<meta name="description" content="Arstara membantu kamu menemukan tempat makan, hiburan, wisata, dan jasa UMKM terdekat dengan harga yang jelas, diverifikasi oleh pengunjung nyata.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10201b;--muted:#4d6159;--bg:#f4f8f5;--card:#fff;--teal:#0d5c4b;--teal-d:#083d32;--gold:#f4b400;--line:#d6e2db;--red:#c8432b;
+--h:'Bricolage Grotesque','Trebuchet MS',sans-serif;--b:'Plus Jakarta Sans','Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1rem/1.65 var(--b);color:var(--ink);background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--h);line-height:1.1;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,5.6vw,4rem);font-weight:800}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;max-width:20ch}
+h3{font-size:1.25rem;font-weight:600}
+p{max-width:62ch}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--teal);background:var(--teal);color:#fff;cursor:pointer;font-family:inherit;font-size:1rem}
+.btn:hover{background:var(--teal-d)}
+.btn.alt{background:transparent;color:var(--teal)}
+.btn.alt:hover{background:#e3efe9}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+header{position:sticky;top:0;z-index:10;background:rgba(244,248,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 1.5rem var(--h);text-decoration:none;color:var(--teal);display:flex;gap:8px;align-items:center}
+.logo i{width:14px;height:14px;background:var(--gold);border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:block}
+nav ul{display:flex;gap:26px;list-style:none;padding:0;align-items:center}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--teal)}
+nav .btn{padding:9px 18px;color:#fff}
+section{padding:88px 0}
+.hero{padding:64px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero p.lead{font-size:1.15rem;color:var(--muted);margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero small{display:block;margin-top:18px;color:var(--muted)}
+/* map mock */
+.map{position:relative;background:#dfece5;border-radius:28px;min-height:480px;overflow:hidden;border:1px solid var(--line);
+background-image:linear-gradient(#cfe0d7 2px,transparent 2px),linear-gradient(90deg,#cfe0d7 2px,transparent 2px);background-size:64px 64px}
+.map:before{content:"";position:absolute;left:-10%;top:38%;width:130%;height:34px;background:#fff;transform:rotate(-14deg);opacity:.8}
+.pin{position:absolute;width:30px;height:30px;background:var(--teal);border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.pin.off{background:#9aa8a1}
+.pin.me{background:var(--red);border-radius:50%;transform:none;width:20px;height:20px}
+.p1{left:18%;top:20%}.p2{left:62%;top:14%}.p3{left:74%;top:52%}.p4{left:30%;top:60%}.p5{left:48%;top:36%}.me{left:44%;top:50%}
+.sheet{position:absolute;left:14px;right:14px;bottom:14px;background:var(--card);border-radius:20px;padding:16px;box-shadow:0 10px 30px rgba(16,32,27,.18)}
+.sheet h4{font:700 .95rem var(--b);margin-bottom:10px}
+.item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:.92rem}
+.item b{display:block}
+.item span{color:var(--muted);font-size:.82rem}
+.tag{background:#e3f4ea;color:var(--teal);font-weight:700;font-size:.74rem;padding:3px 9px;border-radius:999px;white-space:nowrap;align-self:flex-start}
+.tag.wait{background:#fff3cf;color:#7a5a00}
+/* problem */
+.problem{background:var(--teal-d);color:#fff}
+.problem .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.problem p{color:#cfe3da;margin-top:18px}
+.vs{display:grid;gap:14px}
+.vs div{background:rgba(255,255,255,.08);border-radius:18px;padding:20px}
+.vs div.good{background:var(--gold);color:var(--ink)}
+.vs b{display:block;font-family:var(--h);font-size:1.15rem;margin-bottom:4px}
+/* steps */
+.head{margin-bottom:44px}
+.head p{color:var(--muted);margin-top:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;counter-increment:s}
+.step:before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--gold);font:800 1rem var(--h);margin-bottom:16px}
+.step p{color:var(--muted);font-size:.94rem;margin-top:8px}
+.alt-bg{background:#e8f1ec}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:var(--card);border-radius:24px;padding:34px;border:1px solid var(--line)}
+.panel ul{padding-left:0;list-style:none;margin:18px 0 26px;display:grid;gap:12px}
+.panel li{padding-left:28px;position:relative}
+.panel li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:800}
+.panel.dark{background:var(--teal);color:#fff;border-color:var(--teal)}
+.panel.dark li:before{color:var(--gold)}
+.panel.dark .btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+/* loop */
+.loop{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.loop div{border-left:4px solid var(--gold);padding:4px 0 4px 18px}
+.loop p{color:var(--muted);margin-top:6px;font-size:.95rem}
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:12px;max-width:800px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:10px;color:var(--muted)}
+/* join */
+.join{background:var(--teal);color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.join p{color:#d3e8df;margin-top:14px}
+form{display:grid;gap:12px}
+input,select{width:100%;padding:14px 16px;border-radius:12px;border:2px solid transparent;font:inherit;background:#fff;color:var(--ink)}
+.ok{display:none;background:var(--gold);color:var(--ink);padding:16px;border-radius:12px;font-weight:700}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){
+.hero .wrap,.problem .grid,.split,.join{grid-template-columns:1fr}
+.steps,.loop{grid-template-columns:1fr 1fr}
+nav ul li:not(:last-child){display:none}
+.join{padding:32px 22px}
+section{padding:64px 0}
+}
+@media(max-width:520px){.steps,.loop{grid-template-columns:1fr}.map{min-height:440px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
+<header><div class="wrap nav">
+<a class="logo" href="#" aria-label="Arstara"><i></i>Arstara</a>
+<nav aria-label="Utama"><ul>
+<li><a href="#cara-kerja">Cara kerja</a></li>
+<li><a href="#umkm">Untuk UMKM</a></li>
+<li><a href="#kupon">Kupon</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a class="btn" href="#gabung">Daftar lebih awal</a></li>
+</ul></nav></div></header>
 
-    <header>
-        <div class="logo">
-            <div class="logo-icon"></div>
-            Arstara
-        </div>
-        <a href="mailto:rickymartin@arstara.com" class="cta-btn" style="padding: 10px 24px; font-size: 0.95rem;">Contact Us</a>
-    </header>
+<main>
+<section class="hero"><div class="wrap">
+<div>
+<h1>Temukan UMKM terdekat yang benar-benar buka.</h1>
+<p class="lead">Arstara menampilkan tempat makan, hiburan, wisata, dan jasa lokal lengkap dengan harga dari pemiliknya sendiri. Setiap tempat sudah dikunjungi dan diulas pengguna nyata, jadi kamu tidak perlu menebak.</p>
+<div class="cta"><a class="btn gold" href="#gabung">Daftar lebih awal</a><a class="btn alt" href="#umkm">Daftarkan usahamu</a></div>
+<small>Aplikasi segera hadir. Gabung daftar tunggu untuk akses pertama.</small>
+</div>
+<div class="map" role="img" aria-label="Contoh peta Arstara dengan daftar UMKM di sekitar pengguna">
+<span class="pin p1"></span><span class="pin p2"></span><span class="pin p3"></span><span class="pin p4 off"></span><span class="pin p5"></span><span class="pin me"></span>
+<div class="sheet"><h4>Makanan di dekatmu</h4>
+<div class="item"><div><b>Warung Soto Bu Rini</b><span>350 m · Soto ayam Rp18.000</span></div><span class="tag">Terverifikasi</span></div>
+<div class="item"><div><b>Kopi Sudut Gang</b><span>600 m · Es kopi susu Rp15.000</span></div><span class="tag">Terverifikasi</span></div>
+<div class="item"><div><b>Bakso Pak Darto</b><span>900 m · Bakso urat Rp20.000</span></div><span class="tag wait">Menunggu ulasan</span></div>
+</div></div>
+</div></section>
 
-    <section class="hero">
-        <h1>AI-powered automation <br/>for businesses.</h1>
-        <p>Arstara builds intelligent tools that help businesses automate repetitive workflows, access business information faster, and improve daily operations using AI.</p>
-        <a href="#product" class="cta-btn">Discover Our Product</a>
-    </section>
+<section class="problem"><div class="wrap grid">
+<div><h2>Tempat yang sudah tutup tidak boleh tetap tampil.</h2>
+<p>Banyak peta menampilkan usaha yang sudah lama tutup, dengan harga yang sudah berubah. Kamu sampai di lokasi, ternyata kosong. Arstara menyelesaikannya dari dua sisi: pengunjung memverifikasi, pelaku usaha berlangganan agar tetap aktif.</p></div>
+<div class="vs">
+<div><b>Peta biasa</b>Pemilik bisa klaim sepihak, ulasan bisa dimanipulasi, dan usaha tutup masih tampil.</div>
+<div class="good"><b>Arstara</b>Tempat baru tampil sebagai terverifikasi setelah dikunjungi pengguna lain. Usaha yang berhenti berlangganan otomatis disembunyikan.</div>
+</div></div></section>
 
-    <section id="product" class="section">
-        <h2 class="section-title">Our Product</h2>
-        <div class="product-card">
-            <h3>AI-Powered Business Assistant</h3>
-            <p>Connect your company data with our conversational interfaces, allowing your team to retrieve mission-critical information and perform routine tasks seamlessly, without ever having to manually navigate internal systems.</p>
-        </div>
-    </section>
+<section id="cara-kerja"><div class="wrap">
+<div class="head"><h2>Dari daftar sampai terverifikasi</h2><p>Tidak ada jalan pintas. Kepercayaan datang dari orang yang benar-benar datang.</p></div>
+<div class="steps">
+<div class="step"><h3>UMKM mendaftar</h3><p>Pelaku usaha mengisi profil, lokasi, serta menu dan harga, atau harga tiket dan tarif jasa.</p></div>
+<div class="step"><h3>Pengguna berkunjung</h3><p>Tempat tampil sebagai "menunggu ulasan". Pengguna datang, mencoba, lalu memberi ulasan.</p></div>
+<div class="step"><h3>Terverifikasi komunitas</h3><p>Setelah cukup ulasan dari pengunjung berbeda, tempat mendapat label terverifikasi.</p></div>
+<div class="step"><h3>Tampil di sekitar</h3><p>Pengguna yang mencari di dekatnya melihat tempat itu beserta harga yang pasti.</p></div>
+</div></div></section>
 
-    <footer>
-        <div class="logo" style="justify-content: center;">
-            <div class="logo-icon" style="width: 20px; height: 20px; border-radius: 6px;"></div>
-            Arstara
-        </div>
-        <p class="contact-info">Get in touch directly at <br/> <a href="mailto:rickymartin@arstara.com">rickymartin@arstara.com</a></p>
-        <p style="color: #484f58; font-size: 0.9rem; margin-top: 3rem;">&copy; 2026 Arstara. All rights reserved.</p>
-    </footer>
+<section id="umkm" class="alt-bg"><div class="wrap">
+<div class="head"><h2>Satu aplikasi untuk pengguna dan pelaku usaha</h2></div>
+<div class="split">
+<div class="panel"><h3>Untuk pengguna</h3>
+<ul><li>Cari makanan, hiburan, wisata, atau jasa di sekitarmu</li>
+<li>Lihat menu, harga tiket, atau tarif sebelum berangkat</li>
+<li>Percaya pada ulasan dari pengunjung sungguhan</li>
+<li>Dapat kupon yang bisa ditukar langsung di tempat usaha</li></ul>
+<a class="btn" href="#gabung">Daftar sebagai pengguna</a></div>
+<div class="panel dark"><h3>Untuk pelaku UMKM</h3>
+<ul><li>Tampil di depan orang yang sedang mencari di dekatmu</li>
+<li>Harga diinput sendiri, jadi pelanggan datang dengan ekspektasi yang tepat</li>
+<li>Langganan membuktikan usahamu masih aktif</li>
+<li>Kupon mendatangkan pelanggan baru ke tokomu</li></ul>
+<a class="btn" href="#gabung">Daftarkan usahaku</a></div>
+</div>
+<p style="margin-top:22px;color:var(--muted)">Wajib untuk semua usaha: restoran mengisi menu dan harga, wisata mengisi harga tiket, penyedia jasa mengisi tarif.</p>
+</div></section>
 
+<section id="kupon"><div class="wrap">
+<div class="head"><h2>Kupon: pengguna hemat, UMKM dapat pelanggan</h2>
+<p>Sebagian hasil langganan dikembalikan kepada pengguna dalam bentuk kupon yang ditukar di UMKM mitra.</p></div>
+<div class="loop">
+<div><h3>UMKM berlangganan</h3><p>Pembayaran menjaga usaha tetap aktif dan tampil di aplikasi.</p></div>
+<div><h3>Pengguna dapat kupon</h3><p>Kupon diperoleh dari aktivitas seperti berkunjung dan memberi ulasan.</p></div>
+<div><h3>Kupon ditukar di tempat</h3><p>Pengguna dapat potongan harga, UMKM mendapat pelanggan baru.</p></div>
+</div></div></section>
+
+<section id="faq" class="alt-bg"><div class="wrap">
+<div class="head"><h2>Pertanyaan umum</h2></div>
+<details><summary>Kenapa UMKM harus berlangganan?</summary><p>Langganan memastikan hanya usaha yang masih berjalan yang tampil. Jika berhenti membayar, tempatmu disembunyikan sampai diaktifkan lagi, sehingga pengguna tidak datang ke lokasi yang sudah tutup.</p></details>
+<details><summary>Bagaimana cara mencegah ulasan palsu?</summary><p>Verifikasi tidak bisa diklaim sendiri oleh pemilik. Tempat baru terverifikasi lewat kunjungan dan ulasan dari beberapa pengguna berbeda.</p></details>
+<details><summary>Apakah harga bisa berubah?</summary><p>Bisa. Pelaku usaha memperbarui sendiri harga di aplikasi, dan pengguna dapat melaporkan jika harga di tempat berbeda.</p></details>
+<details><summary>Kapan aplikasi tersedia?</summary><p>Kami sedang menyiapkan peluncuran. Daftar lebih awal agar kamu dihubungi pertama kali.</p></details>
+<details><summary>Berapa biaya langganan?</summary><p>Skema harga akan diumumkan saat peluncuran. Pendaftar awal akan mendapat informasi lebih dulu.</p></details>
+</div></section>
+
+<section id="gabung"><div class="wrap"><div class="join">
+<div><h2>Jadi yang pertama tahu.</h2><p>Tinggalkan kontakmu dan kami kabari saat Arstara hadir di kotamu.</p></div>
+<div>
+<form id="f" novalidate>
+<label class="sr" for="n" style="position:absolute;left:-9999px">Nama</label>
+<input id="n" name="nama" placeholder="Nama" required autocomplete="name">
+<label for="e" style="position:absolute;left:-9999px">Email</label>
+<input id="e" name="email" type="email" placeholder="Email atau WhatsApp" required>
+<label for="r" style="position:absolute;left:-9999px">Saya adalah</label>
+<select id="r" name="peran"><option>Saya pengguna</option><option>Saya pelaku UMKM</option></select>
+<button class="btn gold" type="submit">Daftar lebih awal</button>
+</form>
+<div class="ok" id="ok" role="status">Terima kasih! Kami akan menghubungimu saat peluncuran.</div>
+</div></div></div></section>
+</main>
+
+<footer><div class="wrap"><span><b>Arstara</b> — mengembangkan UMKM lewat komunitas.</span><span>© 2026 Arstara. Hak cipta dilindungi.</span></div></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();
+var n=this.nama.value.trim(),m=this.email.value.trim();
+if(!n||!m){(n?this.email:this.nama).focus();return}
+/* TODO: kirim data ke backend/Google Form/Formspree di sini */
+this.style.display='none';document.getElementById('ok').style.display='block';
+});
+</script>
 </body>
 </html>
